@@ -27,6 +27,7 @@ import LogoAndroid from '../assets/common/android.jpg'
 import LogoMySql from '../assets/common/mysql.jpg'
 import LogoProjectManagement from '../assets/common/project management.jpg'
 import LogoEng from '../assets/common/eng.png'
+import LolloArtio from '../assets/common/lolloartio.jpg'
 
 
 
@@ -70,7 +71,7 @@ function Home({onMoreInfoClick}) {
     <div className='home'>
         <div className='flexbox'>
             <div className='frame-container'>
-                <img src={Ezio} alt="Esempio" className="image-frame" />
+                <img src={LolloArtio} alt="Esempio" className="image-frame" />
             </div>
             <div className='container'>
                 <h1 className='h1'><span className='pre-auto-type'>{t("ima")} </span> <span className='auto-type'>{t("software")}</span></h1>
