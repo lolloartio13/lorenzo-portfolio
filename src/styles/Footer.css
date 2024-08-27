@@ -1,0 +1,97 @@
+/* Stile del footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 6px 6px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sezione dei link social */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #555; /* Colore del cerchio */
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 50%;
+}
+
+.footer-link .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #696969;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Posizionamento del tooltip sopra l'elemento */
+    left: 50%;
+    margin-left: -60px; /* Centra il tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.footer-link:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer-link:hover {
+    background-color: #a5a5a5; /* Colore del cerchio al passaggio del mouse */
+    transform: scale(1.1); /* Ingrandisce l'icona al passaggio del mouse */
+}
+
+.footer-icon {
+    font-size: 24px; /* Dimensione dell'icona */
+}
+
+/* Sezione di contatto */
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+}
+
+.footer-contact p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.footer-text {
+    margin: 10px 0 0 0;
+}

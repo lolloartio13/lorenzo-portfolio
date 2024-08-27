@@ -1,0 +1,91 @@
+/* Definisci l'animazione per l'effetto ondulato della cornice */
+@keyframes waveEffect {
+    0% {
+      border: 6px solid transparent; /* Colore della cornice inizialmente trasparente */
+      border-radius: 50%; /* Forma circolare */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra leggera */
+    }
+    50% {
+      border: 6px solid transparent; /* Colore della cornice trasparente */
+      border-radius: 50% 25% 50% 25% / 25% 50% 25% 50%; /* Forma ondulata */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombra più intensa */
+    }
+    100% {
+      border: 6px solid transparent; /* Colore della cornice trasparente */
+      border-radius: 50%; /* Forma circolare */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra leggera */
+    }
+  }
+  
+  /* Applica l'animazione alla cornice dell'immagine */
+  .image-frame {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 400px; /* Larghezza dell'immagine */
+    height: 400px; /* Altezza dell'immagine */
+    border-radius: 50%; /* Forma circolare */
+    border: 6px solid transparent; /* Inizialmente trasparente per applicare l'animazione */
+    background: linear-gradient(white, white) padding-box, /* Cornice bianca che si adatta all'immagine */
+                linear-gradient(120deg, #ff6f61, #ff3d3d, #ff6f61); /* Gradiente rosato-rosso */
+    background-clip: border-box; /* Rende il gradiente visibile nella cornice */
+    animation: waveEffect 6s infinite alternate; /* Durata e ripetizione dell'animazione */
+    object-fit: cover; /* Mantieni le proporzioni dell'immagine senza deformarla */
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h1 {
+    color: #fff;
+    font-size: 60px;
+  }
+
+  .pre-auto-type {
+    display: inline-block;
+    overflow: hidden; /* Assicura che il testo venga nascosto */
+    color: #fff;
+  }
+
+  .auto-type {
+    display: inline-block;
+    overflow: hidden; /* Assicura che il testo venga nascosto */
+    color: #fff724;
+    border-right: 5px solid #fff724;
+    white-space: nowrap; /* Mantiene tutto su una riga */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Effetto del cursore lampeggiante */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+  .flexbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home {
+    background-color: #1f1c1c;
+    /* margin-top: 50px;*/
+  }
+
+  .box-container {
+    margin-left: 8%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.3fr);
+  }
