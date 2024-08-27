@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next'
@@ -37,6 +37,10 @@ function App() {
   } else {
     document.body.classList.remove('active-modal');
   }
+
+  useEffect(() => {
+    document.title = "Lorenzo Artioli DEV"; // Modifica il titolo quando il componente viene montato
+  }, []);
 
   return (
     <div className="App">
