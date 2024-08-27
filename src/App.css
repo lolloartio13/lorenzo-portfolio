@@ -53,15 +53,16 @@ body.active-modal {
 }
 
 /* Stili generali per il modale e l'overlay */
+/* Stili generali per il modale e l'overlay */
 .modal, .overlay {
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   position: fixed;
+  display: flex;
   align-items: center;
   justify-content: center;
-  /*z-index: 1000; /* Assicurati che il modale sia sopra altri contenuti */
 }
 
 /* Overlay che copre lo sfondo */
@@ -73,49 +74,16 @@ body.active-modal {
 
 /* Contenuto del modale */
 .modal-content {
-  position: absolute;
-  top: 5%;
-  left: 27%;
-  transform: translate(-50%, -50%);
-  line-height: 1.4;
   background: #f1f1f1;
   padding: 20px;
   border-radius: 8px;
-  width: 700px;
+  width: 90%;
+  max-width: 700px; /* Limita la larghezza massima del modale */
+  max-height: 80vh; /* Limita l'altezza massima del modale */
+  overflow-y: auto; /* Rende il contenuto scrollabile se supera l'altezza massima */
+  position: relative;
   opacity: 0;
-  transform: translateY(-30px);
   animation: fadeInContent 0.5s 0.3s forwards, slideUp 0.5s 0.3s forwards;
-}
-
-.modal-title {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInTitle 0.5s 0.8s forwards, slideUpTitle 0.5s 0.8s forwards;
-}
-
-/* Descrizione del modale */
-.modal-desc {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInDesc 0.5s 1.8s forwards, slideUpDesc 0.5s 1.8s forwards;
-}
-
-.modal-place {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInDesc 0.5s 1.2s forwards, slideUpDesc 0.5s 1.2s forwards;
-}
-
-.modal-year {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInDesc 0.5s 1.4s forwards, slideUpDesc 0.5s 1.4s forwards;
-}
-
-.modal-site {
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInDesc 0.5s 1.6s forwards, slideUpDesc 0.5s 1.6s forwards;
 }
 
 /* Pulsante per chiudere il modale */
@@ -126,21 +94,23 @@ body.active-modal {
   padding: 5px 7px;
   cursor: pointer;
   border: 1px solid #f1f1f1;
+  background: none;
 }
 
+/* Skills container */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* Spazio tra gli elementi */
-  margin-top: 20px; /* Margine superiore per separare dalle altre sezioni */
-  /*animation: fadeInDesc 0.5s 1.6s forwards, slideUpDesc 0.5s 1.6s forwards;*/
+  gap: 10px;
+  margin-top: 20px;
 }
 
+/* Stili per gli elementi delle skill */
 .skill-item {
   text-align: center;
-  width: 80px; /* Larghezza fissa per gestire l'allineamento */
-  margin-bottom: 5px; /* Spazio inferiore per separare le righe */
+  width: 80px;
+  margin-bottom: 5px;
 }
 
 .skill-img {
@@ -153,17 +123,15 @@ body.active-modal {
 
 .skill-name {
   font-size: 14px;
-  color: #333; /* Colore del testo */
+  color: #333;
 }
 
-
-/* Animazione per il fade-in dell'overlay */
+/* Animazioni per l'overlay e il contenuto del modale */
 @keyframes fadeInOverlay {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Animazione per il fade-in e slide-up del contenuto del modale */
 @keyframes fadeInContent {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -171,17 +139,6 @@ body.active-modal {
 
 @keyframes slideUp {
   from { transform: translateY(30px); }
-  to { transform: translateY(0); }
-}
-
-
-@keyframes fadeInTitle {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUpTitle {
-  from { transform: translateY(20px); }
   to { transform: translateY(0); }
 }
 

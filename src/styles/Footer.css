@@ -95,3 +95,26 @@
 .footer-text {
     margin: 10px 0 0 0;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    .footer-contact {
+        flex-direction:column; /* Disposizione verticale per i contatti */
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .footer-text {
+        margin-top: 20px;
+    }
+
+    .footer-icon {
+        font-size: 20px; /* Riduci leggermente le icone per i dispositivi mobili */
+    }
+
+    .footer-link {
+        width: 40px;
+        height: 40px; /* Riduci la dimensione dei cerchi */
+    }
+}

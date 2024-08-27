@@ -89,3 +89,35 @@
     display: grid;
     grid-template-columns: repeat(3, 0.3fr);
   }
+
+
+  @media only screen and (max-width: 768px) {
+    .image-frame {
+      width: 200px;  /* Riduci dimensione immagine */
+      height: 200px; /* Riduci dimensione immagine */
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+  
+    .h1 {
+      font-size: 40px;  /* Riduci dimensione del testo */
+      text-align: center; /* Allinea il testo al centro */
+    }
+  
+    .flexbox {
+      flex-direction: column; /* Disposizione verticale su schermi piccoli */
+      align-items: center;
+    }
+  
+    .box-container {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column; /* Disposizione dei box uno sotto l'altro */
+      align-items: center;
+    }
+  
+    .box-container > div {
+      width: 90%; /* Allarga i box per adattarli allo schermo */
+      margin-bottom: 20px;
+    }
+  }
