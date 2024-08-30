@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-links">
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/lorenzo-artioli-7b072b325"
             className="footer-link"
             target="_blank"
             rel="noopener noreferrer"
