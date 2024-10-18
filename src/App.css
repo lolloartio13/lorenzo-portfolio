@@ -39,12 +39,10 @@
 }
 
 
-/* Impedisce lo scrolling della pagina quando il modale è aperto */
 body.active-modal {
   overflow-y: hidden;
 }
 
-/* Stili per il pulsante del modale, se necessario */
 .btn-modal {
   padding: 10px 20px;
   display: block;
@@ -52,8 +50,6 @@ body.active-modal {
   font-size: 18px;
 }
 
-/* Stili generali per il modale e l'overlay */
-/* Stili generali per il modale e l'overlay */
 .modal, .overlay {
   width: 100vw;
   height: 100vh;
@@ -65,28 +61,25 @@ body.active-modal {
   justify-content: center;
 }
 
-/* Overlay che copre lo sfondo */
 .overlay {
   background: rgba(49,49,49,0.8);
   opacity: 0;
   animation: fadeInOverlay 0.3s forwards;
 }
 
-/* Contenuto del modale */
 .modal-content {
   background: #f1f1f1;
   padding: 20px;
   border-radius: 8px;
   width: 90%;
-  max-width: 700px; /* Limita la larghezza massima del modale */
-  max-height: 80vh; /* Limita l'altezza massima del modale */
-  overflow-y: auto; /* Rende il contenuto scrollabile se supera l'altezza massima */
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
   position: relative;
   opacity: 0;
   animation: fadeInContent 0.5s 0.3s forwards, slideUp 0.5s 0.3s forwards;
 }
 
-/* Pulsante per chiudere il modale */
 .close-modal {
   position: absolute;
   top: 10px;
@@ -97,7 +90,6 @@ body.active-modal {
   background: none;
 }
 
-/* Skills container */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -106,7 +98,6 @@ body.active-modal {
   margin-top: 20px;
 }
 
-/* Stili per gli elementi delle skill */
 .skill-item {
   text-align: center;
   width: 80px;
@@ -126,7 +117,6 @@ body.active-modal {
   color: #333;
 }
 
-/* Animazioni per l'overlay e il contenuto del modale */
 @keyframes fadeInOverlay {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -142,7 +132,6 @@ body.active-modal {
   to { transform: translateY(0); }
 }
 
-/* Animazioni per la descrizione del modale */
 @keyframes fadeInDesc {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -153,7 +142,6 @@ body.active-modal {
   to { transform: translateY(0); }
 }
 
-/* Descrizione del modale */
 .modal-desc {
   opacity: 0;
   transform: translateY(-20px);

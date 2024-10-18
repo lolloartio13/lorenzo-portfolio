@@ -1,35 +1,33 @@
-/* Definisci l'animazione per l'effetto ondulato della cornice */
 @keyframes waveEffect {
     0% {
-      border: 6px solid transparent; /* Colore della cornice inizialmente trasparente */
-      border-radius: 50%; /* Forma circolare */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra leggera */
+      border: 6px solid transparent;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
     50% {
-      border: 6px solid transparent; /* Colore della cornice trasparente */
-      border-radius: 50% 25% 50% 25% / 25% 50% 25% 50%; /* Forma ondulata */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombra più intensa */
+      border: 6px solid transparent;
+      border-radius: 50% 25% 50% 25% / 25% 50% 25% 50%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     }
     100% {
-      border: 6px solid transparent; /* Colore della cornice trasparente */
-      border-radius: 50%; /* Forma circolare */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra leggera */
+      border: 6px solid transparent;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
   }
   
-  /* Applica l'animazione alla cornice dell'immagine */
   .image-frame {
     margin-left: 50px;
     margin-top: 50px;
-    width: 400px; /* Larghezza dell'immagine */
-    height: 400px; /* Altezza dell'immagine */
-    border-radius: 50%; /* Forma circolare */
-    border: 6px solid transparent; /* Inizialmente trasparente per applicare l'animazione */
-    background: linear-gradient(white, white) padding-box, /* Cornice bianca che si adatta all'immagine */
-                linear-gradient(120deg, #ff6f61, #ff3d3d, #ff6f61); /* Gradiente rosato-rosso */
-    background-clip: border-box; /* Rende il gradiente visibile nella cornice */
-    animation: waveEffect 6s infinite alternate; /* Durata e ripetizione dell'animazione */
-    object-fit: cover; /* Mantieni le proporzioni dell'immagine senza deformarla */
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(120deg, #ff6f61, #ff3d3d, #ff6f61);
+    background-clip: border-box;
+    animation: waveEffect 6s infinite alternate;
+    object-fit: cover;
   }
   
   .container {
@@ -46,16 +44,16 @@
 
   .pre-auto-type {
     display: inline-block;
-    overflow: hidden; /* Assicura che il testo venga nascosto */
+    overflow: hidden;
     color: #fff;
   }
 
   .auto-type {
     display: inline-block;
-    overflow: hidden; /* Assicura che il testo venga nascosto */
+    overflow: hidden;
     color: #fff724;
     border-right: 5px solid #fff724;
-    white-space: nowrap; /* Mantiene tutto su una riga */
+    white-space: nowrap;
     animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
   }
 
@@ -64,7 +62,6 @@
     to { width: 100%; }
 }
 
-/* Effetto del cursore lampeggiante */
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: black; }
@@ -93,31 +90,31 @@
 
   @media only screen and (max-width: 768px) {
     .image-frame {
-      width: 200px;  /* Riduci dimensione immagine */
-      height: 200px; /* Riduci dimensione immagine */
+      width: 200px;
+      height: 200px;
       margin-left: 20px;
       margin-top: 20px;
     }
   
     .h1 {
-      font-size: 40px;  /* Riduci dimensione del testo */
-      text-align: center; /* Allinea il testo al centro */
+      font-size: 40px;
+      text-align: center;
     }
   
     .flexbox {
-      flex-direction: column; /* Disposizione verticale su schermi piccoli */
+      flex-direction: column;
       align-items: center;
     }
   
     .box-container {
       margin-left: 0;
       display: flex;
-      flex-direction: column; /* Disposizione dei box uno sotto l'altro */
+      flex-direction: column;
       align-items: center;
     }
   
     .box-container > div {
-      width: 90%; /* Allarga i box per adattarli allo schermo */
+      width: 90%;
       margin-bottom: 20px;
     }
   }

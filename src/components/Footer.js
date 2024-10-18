@@ -26,7 +26,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} className="footer-icon" />
-            <span className="tooltip">{t("link")}</span> {/* Tooltip per LinkedIn */}
+            <span className="tooltip">{t("link")}</span>
           </a>
           <a
             href={resume}
@@ -36,7 +36,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faFileAlt} className="footer-icon" />
-            <span className="tooltip">{t("cv")}</span> {/* Tooltip per CV */}
+            <span className="tooltip">{t("cv")}</span> 
           </a>
         </div>
         <div className="footer-contact">

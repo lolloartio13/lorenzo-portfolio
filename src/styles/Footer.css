@@ -1,4 +1,3 @@
-/* Stile del footer */
 .footer {
     background-color: #333;
     color: #fff;
@@ -16,7 +15,6 @@
     padding: 0 20px;
 }
 
-/* Sezione dei link social */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -34,7 +32,7 @@
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #555; /* Colore del cerchio */
+    background-color: #555;
     transition: background-color 0.3s, transform 0.3s;
     border-radius: 50%;
 }
@@ -49,9 +47,9 @@
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 100%; /* Posizionamento del tooltip sopra l'elemento */
+    bottom: 100%;
     left: 50%;
-    margin-left: -60px; /* Centra il tooltip */
+    margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -62,15 +60,14 @@
 }
 
 .footer-link:hover {
-    background-color: #a5a5a5; /* Colore del cerchio al passaggio del mouse */
-    transform: scale(1.1); /* Ingrandisce l'icona al passaggio del mouse */
+    background-color: #a5a5a5;
+    transform: scale(1.1);
 }
 
 .footer-icon {
-    font-size: 24px; /* Dimensione dell'icona */
+    font-size: 24px;
 }
 
-/* Sezione di contatto */
 .footer-contact {
     display: flex;
     justify-content: center;
@@ -100,7 +97,7 @@
 @media only screen and (max-width: 768px) {
 
     .footer-contact {
-        flex-direction:column; /* Disposizione verticale per i contatti */
+        flex-direction:column;
         gap: 10px;
         margin: 20px 0;
     }
@@ -110,11 +107,11 @@
     }
 
     .footer-icon {
-        font-size: 20px; /* Riduci leggermente le icone per i dispositivi mobili */
+        font-size: 20px;
     }
 
     .footer-link {
         width: 40px;
-        height: 40px; /* Riduci la dimensione dei cerchi */
+        height: 40px;
     }
 }

@@ -39,7 +39,7 @@ function App() {
   }
 
   useEffect(() => {
-    document.title = "Lorenzo Artioli DEV"; // Modifica il titolo quando il componente viene montato
+    document.title = "Lorenzo Artioli DEV";
   }, []);
 
   return (

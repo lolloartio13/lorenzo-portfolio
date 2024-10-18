@@ -1,4 +1,3 @@
-/* src/components/Box.css */
 
 .box {
     border: 1px solid #ddd;
@@ -75,30 +74,27 @@
 
 .typing-container {
     width: fit-content;
-    font-family: 'Courier New', Courier, monospace; /* Stile tipico da terminale */
+    font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid black; /* Aggiunge un cursore */
-    margin: 50px auto; /* Centra il testo orizzontalmente */
+    border-right: 2px solid black;
+    margin: 50px auto;
 }
 
 .typing-text {
     display: inline-block;
-    overflow: hidden; /* Assicura che il testo venga nascosto */
-    border-right: 2px solid black; /* Cursore statico */
-    white-space: nowrap; /* Mantiene tutto su una riga */
+    overflow: hidden;
+    border-right: 2px solid black;
+    white-space: nowrap;
     animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-    /* L'animazione typing appare con 40 steps (equivalente al numero di caratteri) */
 }
 
-/* Effetto di digitazione */
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
 
-/* Effetto del cursore lampeggiante */
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: black; }

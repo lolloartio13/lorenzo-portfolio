@@ -1,4 +1,3 @@
-// src/components/Box.js
 
 import React from 'react';
 import '../styles/Box.css';
